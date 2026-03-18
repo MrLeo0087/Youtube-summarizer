@@ -1,0 +1,29 @@
+# --- Python Bytecode & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+bin/
+include/
+lib/
+
+# --- Environment Variables (Private Keys) ---
+.env
+.flaskenv
+
+# --- Distribution / Packaging ---
+dist/
+build/
+*.egg-info/
+
+# --- IDE Specific (Optional but recommended) ---
+.vscode/
+.idea/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db

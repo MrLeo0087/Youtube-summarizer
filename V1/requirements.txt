@@ -1,0 +1,32 @@
+# --- Core Frameworks ---
+streamlit>=1.40.0
+langchain>=0.3.0
+langgraph>=0.2.0
+langchain-community>=0.3.0
+
+# --- AI Model Integrations ---
+google-generativeai>=0.8.0
+langchain-google-genai>=2.0.0
+langchain-ollama>=0.1.0
+
+# --- Retrieval & RAG ---
+langchain-chroma>=0.1.4
+sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
+nltk>=3.8.1
+pypdf>=4.0.0
+tiktoken>=0.7.0
+
+# --- YouTube & Data Extraction ---
+youtube-transcript-api
+yt-dlp
+
+# --- Backend Stability (Critical for Python 3.13) ---
+transformers>=4.45.0
+accelerate>=0.34.0
+protobuf>=3.20.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# --- Fixes the 'soxr' audio error ---
+soxr>=0.5.0
