@@ -17,13 +17,13 @@ langchain-ollama
 
 # Vector Store
 chromadb
+pysqlite3-binary
 
 # RAG & Retrieval
 rank-bm25
 sentence-transformers
-faiss-cpu
 
-# NLP (BM25 preprocessing)
+# NLP
 nltk
 
 # YouTube Transcript
@@ -31,9 +31,9 @@ youtube-transcript-api
 requests
 
 # Web Search
+ddgs
 duckduckgo-search
 
 # Translation
 deep-translator
 
-pysqlite3-binary
