@@ -129,20 +129,24 @@ def llm_transcript_generator(audio: str, api: str, lang: str = 'English'):
 
 def llm_transcript(youtube_url: str, api: str, lang: str):
     audio_file = None
-
     try:
-        print("\nStep 1: Downloading audio...")
-        audio_file = download_audio(youtube_url)
+        try:
+            print("\nStep 1: Downloading audio...")
+            audio_file = download_audio(youtube_url)
 
-        print("\nStep 2: Transcribing with Gemini...\n")
+            print("\nStep 2: Transcribing with Gemini...\n")
 
-        for line in llm_transcript_generator(audio_file, api, lang):
-            yield line
+            for line in llm_transcript_generator(audio_file, api, lang):
+                yield line
 
-    finally:
-        if audio_file and os.path.exists(audio_file):
-            os.remove(audio_file)
-            print("\nCleaned up audio file.")
+        finally:
+            if audio_file and os.path.exists(audio_file):
+                os.remove(audio_file)
+                print("\nCleaned up audio file.")
+
+    except:
+        yield "This feature only avaliable in offline. PUll code for use this feature"
+        return
 
 
 # # ─── RUN ──────────────────────────────────────────────────
