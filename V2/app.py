@@ -99,7 +99,7 @@ def translate_function(full_text,note_lang):
 
 # ------------ Side Bar --------------
 with st.sidebar:
-    st.title("Setting ⚙️",text_alignment='center')
+    st.title("Setting ⚙️")
     st.divider()
     url = st.text_input('Video URL',placeholder='Paste youtube video link')
     if url:
