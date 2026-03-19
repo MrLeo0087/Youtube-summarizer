@@ -25,4 +25,4 @@ jobs:
           git config user.name "GitHub Action"
           git add .
           git commit -m "Sync V2 to HF Space"
-          git push https://MrLeo0087:$HF_TOKEN@huggingface.co/spaces/MrLeo0087/youtube-summarizer main --force
+          git push https://MrLeo0087:$HF_TOKEN@huggingface.co/spaces/MrLeo0087/youtube-summarizer master:main --force
