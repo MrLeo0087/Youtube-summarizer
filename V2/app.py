@@ -1,7 +1,3 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 import streamlit as st
 st.set_page_config("Youtube video summarizer",page_icon='📄')
 with st.spinner("Importing Library ..... ",show_time= True):
@@ -99,7 +95,7 @@ def translate_function(full_text,note_lang):
 
 # ------------ Side Bar --------------
 with st.sidebar:
-    st.title("Setting ⚙️")
+    st.title("Setting ⚙️",text_alignment='center')
     st.divider()
     url = st.text_input('Video URL',placeholder='Paste youtube video link')
     if url:
