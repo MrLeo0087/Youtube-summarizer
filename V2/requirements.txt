@@ -31,7 +31,6 @@ youtube-transcript-api
 requests
 
 # Web Search
-ddgs
 duckduckgo-search
 
 # Translation
