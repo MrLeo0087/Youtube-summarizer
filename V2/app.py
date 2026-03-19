@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 with st.spinner("Importing Library ..... ",show_time= True):
     from streamlit_player import st_player
@@ -402,7 +406,7 @@ elif st.session_state.page == 'note':
         st.divider()
         st.download_button(
             "⬇️ Download Summary",
-            st.session_state.summary,
+            st.session_state.note,
             file_name="summary.md"
         )
         

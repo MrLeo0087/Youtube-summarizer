@@ -191,7 +191,7 @@ class BatchStrategy:
 # Main RAG System
 # ─────────────────────────────────────────────
 class YouTubeRAG:
-    def __init__(self, api_key: str, db_path: str = "./DATABASE"):
+    def __init__(self, api_key: str, db_path: str = "/tmp/DATABASE"):
         self.api_key    = api_key
         self.db_path    = db_path
         self.embeddings = SmartEmbeddings(api_key)

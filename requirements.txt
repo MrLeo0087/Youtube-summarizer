@@ -1,0 +1,39 @@
+# Core UI
+streamlit
+streamlit-player
+
+# Google Gemini
+google-generativeai
+langchain-google-genai
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-chroma
+
+# Ollama (fallback embeddings)
+langchain-ollama
+
+# Vector Store
+chromadb
+
+# RAG & Retrieval
+rank-bm25
+sentence-transformers
+faiss-cpu
+
+# NLP (BM25 preprocessing)
+nltk
+
+# YouTube Transcript
+youtube-transcript-api
+requests
+
+# Web Search
+duckduckgo-search
+
+# Translation
+deep-translator
+
+pysqlite3-binary
