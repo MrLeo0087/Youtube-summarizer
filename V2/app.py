@@ -3,6 +3,7 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import streamlit as st
+st.set_page_config("Youtube video summarizer",page_icon='📄')
 with st.spinner("Importing Library ..... ",show_time= True):
     from streamlit_player import st_player
     from translate import translate_document
@@ -14,7 +15,6 @@ with st.spinner("Importing Library ..... ",show_time= True):
     from CHAT.website_search import SearchAssistant
     from TRANSCRIPT.llm_transcript_generate import llm_transcript
 
-st.set_page_config("Youtube video summarizer",page_icon='📄')
 
 
 # ----------- Session management ------------------
