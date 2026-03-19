@@ -58,6 +58,7 @@ def transcript_generator(url, api, lang):
 
         preferred_langs = ['en', 'ar', 'fr', 'ne', 'hi'] + available_langs
 
+    
         try:
             transcript = transcript_list.find_generated_transcript(preferred_langs).fetch()
             print("✅ Using auto-generated transcript")
@@ -74,14 +75,16 @@ def transcript_generator(url, api, lang):
         except Exception as e:
             print(f"⚠️ Manual transcript not found: {e}")
 
-        # No transcript found
-        yield "⚠️ This video has no subtitles available. Please try a different video that has captions enabled."
-        return
-
     except TranscriptsDisabled:
-        yield "⚠️ Subtitles are disabled for this video. Please try a different video."
-        return
+        print("⚠️ Transcripts disabled for this video — falling back to Gemini")
 
     except Exception as e:
-        yield f"⚠️ Could not fetch transcript: {str(e)}"
-        return
+        print(f"⚠️ YouTube transcript failed: {e} — falling back to Gemini")
+
+
+    print("🤖 Using Gemini transcription...")
+    from TRANSCRIPT.llm_transcript_generate import llm_transcript
+    for chunk in llm_transcript(url, api, lang):
+        yield chunk
+
+    
