@@ -99,7 +99,7 @@ def translate_function(full_text,note_lang):
 
 # ------------ Side Bar --------------
 with st.sidebar:
-    st.title("Setting ⚙️",text_alignment="center")
+    st.title("Setting ⚙️",text_alignment='center')
     st.divider()
     url = st.text_input('Video URL',placeholder='Paste youtube video link')
     if url:
@@ -507,7 +507,7 @@ elif st.session_state.page == "chat":
 
             if not st.session_state.gemini_key:
                 st.warning('Gemini api key not found')
-                st.stop
+                st.stop()
         
             with col2:
                 st.subheader("Video Chat Mode")

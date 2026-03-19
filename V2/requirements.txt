@@ -1,5 +1,5 @@
 # Core UI
-streamlit
+streamlit==1.55.0
 streamlit-player
 
 # Google Gemini
