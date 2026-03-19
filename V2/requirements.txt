@@ -25,7 +25,7 @@ sentence-transformers
 
 # NLP
 nltk
-
+yt-dlp
 # YouTube Transcript
 youtube-transcript-api
 requests
